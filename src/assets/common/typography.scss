@@ -1,0 +1,32 @@
+
+$fonts : (
+    'Montserrat-Black': (),
+    'Montserrat-BlackItalic': (),
+    'Montserrat-Bold': (),
+    'Montserrat-BoldItalic': (),
+    'Montserrat-ExtraBold': (),
+    'Montserrat-ExtraBoldItalic': (),
+    'Montserrat-ExtraLight': (),
+    'Montserrat-ExtraLightItalic': (),
+    'Montserrat-Italic': (),
+    'Montserrat-Light': (),
+    'Montserrat-LightItalic': (),
+    'Montserrat-Medium': (),
+    'Montserrat-MediumItalic': (),
+    'Montserrat-Regular': (),
+    'Montserrat-SemiBold': (),
+    'Montserrat-SemiBoldItalic': (),
+    'Montserrat-Thin': (),
+    'Montserrat-ThinItalic': ()
+);
+
+@each $font, $map in $fonts {
+    $weight: map-get($map, weight);
+    @font-face {
+        font-family: $font;
+        @if ($weight != null) {
+            font-weight: $weight;
+        }
+        src: url('./assets/fonts/montserrat/'+ $font +'.ttf');
+    }
+}

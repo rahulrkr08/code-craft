@@ -1,1 +1,260 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/common/typography.scss';
+@import './assets/common/linear-gradient.scss';
+
+h1 {
+    font-family: 'Montserrat-Bold';
+    font-size: 48px;
+    color: #000000;
+    letter-spacing: 8.4px;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: 415px) {
+        font-size: 30px;
+    }
+}
+
+h2 {
+    font-family: 'Montserrat-Bold';
+    font-size: 32px;
+    color: #000000;
+    letter-spacing: 5.12px;
+    text-shadow: 0 20px 25px rgba(0,0,0,0.15);
+    text-transform: uppercase;
+
+    @media only screen and (max-width: 415px) {
+        font-size: 20px;
+    }
+}
+
+.contents section {
+    margin: 30px 0px;
+}
+  
+h6 {
+    &.section-header {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        color: #AC6CFF;
+        margin-bottom: 20px;
+        &:after {
+            content: '';
+            border-top: 2px solid;
+            margin: 10px;
+            flex: 1 0 20px;
+        }
+    }
+}
+
+
+.list-items {
+
+    font-family: 'Montserrat-Regular';
+    font-size: 18px;
+    letter-spacing: 0.56px;
+
+    table {
+        border: none;
+        width: 100%;
+        tr { 
+            padding-bottom: 20px;
+        }
+        td {
+            border: none;
+            padding-left: 15px;
+            height: 40px;
+        }
+    }
+
+    .active {
+        box-shadow: 0 20px 20px 0 rgba(0,0,0,0.15);
+        color: #ffffff;
+        background: #E47D7D;
+        background: -webkit-linear-gradient(left, #AD6BFF 0%, #74BCF7 100%);
+        background: linear-gradient(to right, #AD6BFF 0%, #74BCF7 100%);
+    }
+}
+
+.main-content {
+    padding: 1rem 2rem;
+}
+
+.icons {
+    padding-left: 35px;
+    width: 24px;
+    height: 24px;
+    &.morning-wh {
+        background: url('./assets/images/morning-wh.png') no-repeat;    
+    }
+
+
+    &.day {
+        background: url('./assets/images/day-dk.png') no-repeat;
+    }
+
+    &.night {
+        background: url('./assets/images/night-dk.png') no-repeat;
+    }
+
+    &.tick-wh {
+        background: url('./assets/images/tick-wh.png') no-repeat;
+    }
+
+    &.tick {
+        background: url('./assets/images/tick-wh-lt.png') no-repeat;
+    }
+}
+
+.sidebar {
+    background: -webkit-linear-gradient(bottom, #AD6BFF 0%, #74BCF7 100%);
+    background: linear-gradient(to bottom, #AD6BFF 0%, #74BCF7 100%);
+    height: 100;
+    padding: 0px;
+}
+
+.images-block-container {
+    padding: 20px;
+    .image-block {
+        display: flex;
+        margin: 20px 0px;
+        &.active {            
+            flex-direction: row-reverse;
+            .block {
+                margin-right: -20px;
+                margin-left: 0px;
+
+                @media only screen and (max-width: 768px) {
+                    margin-right: -120px;
+                }
+
+                @media only screen and (max-width: 415px) {
+                    margin-right: -65px;
+                }
+            }
+        }
+
+        .image, .image img {
+            width: 140px;
+            height: 140px;
+            z-index: 10;
+
+            @media only screen and (max-width: 415px) {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        .block {
+            width: 233px;
+            height: 140px;
+            background: #FEFFFE;
+            margin-top: 10px;
+            margin-left: -20px;
+            align-items: center;
+            display: flex;
+            > div {
+                width: 100%;
+                padding-left: 20%;
+                
+                @media only screen and (max-width: 415px) {
+                    padding-left: 2%;
+                }
+            }
+
+            .title {
+                font-family: 'Montserrat-Bold';
+                font-size: 16px;
+                color: #000000;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+            .sub-title {
+                opacity: 0.5;
+                font-family: 'Montserrat-Regular';
+                font-size: 15px;
+                color: #666666;
+                letter-spacing: 0.47px;
+            }
+
+            @media only screen and (max-width: 768px) {
+                margin-left: -120px;
+                margin-top: 22px;
+                align-items: flex-end;
+
+                .title {
+                    font-size: 11px;
+                }
+            }
+
+            @media only screen and (max-width: 415px) {
+                margin-left: -70px;
+                margin-top: 0px;
+                height: 100px;
+
+                .title {
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+}
+
+.shade-box {
+    &-items {
+        float: left;
+        margin: 20px 0px 30px;
+        list-style: none;
+        padding: 0px;
+        .item {
+            width: 32px;
+            height: 32px;
+            box-shadow: 0 27px 27px 0 rgba(0,0,0,0.15);
+            
+            float: left;
+            margin: 10px 6.6rem;
+
+            &:first-child {
+                margin-left: 0px; 
+            }
+
+            &:last-child {
+                margin-right: 0px;
+            }
+            
+            @media only screen and (max-width: 768px) {
+                margin: 10px 2rem;
+            }
+
+            @media only screen and (max-width: 376px) {
+                margin: 10px 1rem;
+            }
+
+            &.active {
+                width: 48px;
+                height: 48px;                
+            }
+
+            &.red { 
+                background: #FF4563; 
+                &.active { background: #FF4563 url('./assets/images/tick-wh.png')  no-repeat center; }
+            }
+            &.purple { 
+                background: #8245E6; 
+                &.active { background: #8245E6 url('./assets/images/tick-wh.png')  no-repeat center; }
+            }
+            &.skyblue { 
+                background: #4AC0E0; 
+                &.active { background: #4AC0E0 url('./assets/images/tick-wh.png')  no-repeat center; }
+            }
+            &.blue { 
+                background: #1089EB; 
+                &.active { background: #1089EB url('./assets/images/tick-wh.png')  no-repeat center; }
+            }
+            &.pink { 
+                background: #C791CD; 
+                &.active { background: #C791CD url('./assets/images/tick-wh.png')  no-repeat center; }
+            }
+        }
+    }
+}

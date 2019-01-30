@@ -1,20 +1,109 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3 sidebar">
+      <div class="images-block-container">
+        <div class="image-block active">
+          <div class="image">
+            <img src="./assets/images/lamp.png" />
+          </div>
+          <div class="block">
+            <div>
+              <div class="title">Bed Lamp</div>
+              <div class="sub-title d-none d-lg-block">In Bedroom</div>
+            </div>
+          </div>
+        </div>
+        <div class="image-block">
+          <div class="image">
+            <img src="./assets/images/ac.png" />
+          </div>
+          <div class="block">
+            <div>
+              <div class="title">Noria AC</div>
+              <div class="sub-title d-none d-lg-block">In Bedroom</div>  
+            </div>
+          </div>
+        </div>
+        <div class="image-block">
+          <div class="image">
+            <img src="./assets/images/lock.png" />
+          </div>
+          <div class="block">
+            <div>
+              <div class="title">Door Lock</div>
+              <div class="sub-title d-none d-lg-block">In Home office</div>
+            </div>
+          </div>
+        </div>
+        <div class="image-block">
+          <div class="image">
+            <img src="./assets/images/tv.png" />
+          </div>
+          <div class="block">
+            <div>
+              <div class="title">LG TV</div>
+              <div class="sub-title d-none d-lg-block">In Living Room</div>
+            </div>
+          </div>
+        </div>
+        <div class="image-block">
+          <div class="image">
+            <img src="./assets/images/thermostat.png" />
+          </div>
+          <div class="block">
+            <div>
+              <div class="title">Thermostat</div>
+              <div class="sub-title d-none d-lg-block">In Bedroom</div>
+            </div>
+          </div>
+        </div>
+      </div>     
+      
+    </div>
+    <div class="col-9 main-content">
+      <h1>Devices</h1>
+      <p>&nbsp;</p>
+      <h2>Bed Lamp</h2>
+      <div class="contents">
+          <section>
+            <h6 class="section-header">Shades</h6>
+            <div class="shade-box-container">
+              <ul class="shade-box-items">
+                <li class="item red active">&nbsp;</li>
+                <li class="item purple">&nbsp;</li>
+                <li class="item skyblue">&nbsp;</li>
+                <li class="item blue">&nbsp;</li>
+                <li class="item pink">&nbsp;</li>
+              </ul>
+            </div>
 
+          </section>
+          <section>
+              <h6 class="section-header">Mode</h6>
+              <div class="list-items">
+                <table>
+                  <tr class='active'>
+                    <td><div class='icons morning-wh'>Morning</div></td>
+                    <td class="d-none d-lg-block">50%</td>
+                    <td><div class='icons tick-wh float-right'></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class='icons day'>Day</div></td>
+                    <td class="d-none d-lg-block">30%</td>
+                    <td><div class='icons tick float-right'></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class='icons night'>Night</div></td>
+                    <td class="d-none d-lg-block">100%</td>
+                    <td><div class='icons tick float-right'></div></td>
+                  </tr>
+                </table>
+              </div>
+          </section>      
+          <section>
+            <h6 class="section-header">Intensity</h6>
+          </section>
+      </div>
+    </div>
+  </div>
+</div>
